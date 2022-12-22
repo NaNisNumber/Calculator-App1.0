@@ -1,0 +1,59 @@
+/* THEME 0 */
+
+.calculator__toggler-container {
+  background-color: hsl(223, 31%, 20%);
+  padding: 0.4rem 0.6rem;
+  grid-column: 1 / span 3;
+  border-radius: 2.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.calculator__toggler {
+  background-color: hsl(6, 63%, 50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s background-color;
+}
+.calculator__toggler:hover {
+  cursor: pointer;
+  background-color: hsl(6, 62%, 56%);
+}
+
+/*Classes to move the toggler*/
+
+.move-initial {
+  transition: 0.3s ease-out;
+  transform: translateX(0);
+}
+.move-next-pos {
+  transition: 0.3s ease-out;
+  transform: translateX(2.67rem);
+}
+.move-last-pos {
+  transition: 0.3s ease-out;
+  transform: translateX(5.34rem);
+}
+
+/* THEME 1 */
+.calculator__toggler-container--1 {
+  transition: 0.3 ease-in;
+  background-color: hsl(0, 5%, 81%);
+}
+.calculator__toggler--1 {
+  transition: 0.3 ease-in;
+  background-color: hsl(25, 98%, 40%);
+}
+
+@media (min-width: 350px) {
+  .move-initial {
+    transform: translateX(0);
+  }
+  .move-next-pos {
+    transform: translateX(2.6rem);
+  }
+  .move-last-pos {
+    transform: translateX(5.2rem);
+  }
+}
